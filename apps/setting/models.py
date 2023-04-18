@@ -31,6 +31,21 @@ class Settings(models.Model):
         verbose_name="Instagramm"
     )
 
+
+class About(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    descriptions = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to="about_image/",
+        verbose_name="Фотогрaфия"
+    )
+
+
     def __str__(self):
         return self.title
     
